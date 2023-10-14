@@ -1,0 +1,229 @@
+#include<iostream>
+#include<math.h>
+#include<cstdlib>
+using namespace std;
+
+void addition();
+void subtraction();
+void multiplication();
+void division();
+void factorial();
+void power();
+void square();
+void squareroot();
+void Sine(float);
+void Cos(float);
+void Tan(float);
+void Log(float);
+void Baselog(float);
+ int main()
+ {
+   
+  cout<<"\t\\t Welcome to Digital Calculator" <<endl<<endl;;
+  cout<<"\t\t*******enter 0 to exit********"<<endl<<endl;
+   
+cout<<"Press '1' for Addition: "<<endl;
+cout<<"Press '2' for Subtraction: "<<endl; 
+cout<<"Press '3' for Multiplication : "<<endl; 
+cout<<"Press '4' for Division: "<<endl; 
+cout<<"Press '5' for Factorial: "<<endl;
+cout<<"Press '6' for Power: "<<endl;
+cout<<"Press '7' for Square : "<<endl;
+cout<<"Press '8' for Squareroot : "<<endl;
+cout<<"Press '9' for Sin: "<<endl; 
+cout<<"Press '10' for Cos: "<<endl; 
+cout<<"Press '11' for Tan: "<<endl;
+cout<<"Press '12' for Log: "<<endl;
+cout<<"Press '13' for Base Log: "<<endl;
+ int choice;
+ while(1)
+ {
+ cout<<" \t \t enter your choice";
+ cin>>choice;
+
+ switch(choice) 
+ {
+case 1:
+addition();
+break;
+
+case 2:
+subtraction();
+break;
+
+case 3:
+multiplication();
+break;
+
+case 4:
+division();
+break;
+
+case 5:
+factorial();
+break;
+
+case 6:
+power();
+break;
+
+case 7:
+square();
+break;
+
+case 8:
+squareroot();
+break;
+
+case 9:
+float a;
+cout<<"Enter the Number for Calculating SIN: "<<endl;
+cin >> a;
+Sine(a);
+break;
+
+
+case 10:
+cout<<"Enter the Number for Calculating COS: "<<endl;
+cin>>a;
+Cos(a);
+break;
+
+
+case 11:
+cout<<"Enter the Number for Calculating TAN: "<<endl;
+cin>>a;
+Tan(a);
+break;
+
+
+case 12:
+cout<<"Enter the Number for Calculating LOG: "<<endl;
+cin>>a;
+Log(a);
+break;
+
+
+case 13:
+cout<<"Enter the Number for Calculating LOG WITH BASE 10: "<<endl;
+cin>>a;
+Baselog(a);
+break;
+
+
+case 0:
+exit(0);
+break;
+
+default :
+cout<<"\n ******** Invalid Choice*********";
+ } 
+}       
+return 0;
+}   
+void addition()
+{
+    float a,b,c;
+    cout<<"enter two number for addition";
+    cin>>a>>b;
+    c=a+b;
+    cout<<"the addition is = "<<c;
+}
+void subtraction()
+{
+    float a,b,c;
+    cout<<"enter two number for substrcation";
+    cin>>a>>b;
+    c=a-b;
+    cout<<"the Answer is = "<<c<<endl;
+}
+void multiplication()
+{
+    float a,b,c;
+    cout<<"enter two number for multiplicatoo";
+    cin>>a>>b;
+    c=a*b;
+    cout<<"the Answer is = "<<c<<endl;
+}
+void division()
+{
+    float a,b,c;
+    cout<<"enter two number for divition";
+    cin>>a>>b;
+    c=a/b;
+    cout<<"the  is Answer = "<<c<<endl;
+}
+void factorial()
+{
+    int a;
+    cout<<"enter  number for factorial";
+    cin>>a;
+    int fact=1;
+    for(int i=0;i<a;i++)
+    {
+    fact=fact*i;
+    }
+    cout<<"the  is Answer = "<<fact<<endl;
+}
+void power()
+{
+    double b,e;
+    cout<<"enter  the base number and exponent";
+    cin>>b>>e;
+    double power = pow(b,e);
+    cout<<"the  is Answer = "<<power<<endl;
+}
+
+void square()
+{
+    double b;
+    cout<<"enter  the number";
+    cin>>b;
+    double power = pow(b,2);
+    cout<<"the  is Answer = "<<power<<endl;
+}
+void squareroot()
+{
+    double n;
+    cout<<"enter  the number you want to square root";
+    cin>>n;
+    double squareRoot=sqrt(n);
+    
+    cout<<"the  is Answer = "<<squareRoot<<endl;
+}
+void Sine(float x)
+{
+float s;
+s = sin(x);
+cout<<"Sin: "<<s;
+}
+
+
+
+void Cos(float x) 
+{
+float c;
+c = cos(x);
+cout<<"COS: "<<c;
+}
+
+void Tan(float x)
+{
+float t;
+t = tan(x);
+cout<<"TAN: "<<t;
+}
+
+void Log(float x)
+{
+float l;
+l = log(x);
+cout<<"Natural Logarithm: "<<l;
+}
+
+void Baselog(float x)
+{
+float bl;
+bl = log10(x);
+cout<<"LOG with Base 10: "<<bl;
+}
